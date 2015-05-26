@@ -1,9 +1,9 @@
-
-
 package lemurdatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
+
 /**
  * @title LemurDatabase
  * @author Steven Biro
@@ -15,17 +15,17 @@ public class LemurDatabase {
 
     public static void main(String[] args) {
         //declear list of lemurs
-        List<Lemur> Lemurs =new ArrayList();
+        List<Lemur> Lemurs = new ArrayList();
         int type;
         //create buttons for the menu
-        String buttons[]={"Tree Lemur","Jungle Lemur","Desert Lemur"};
-        int amount=Integer.parseInt(JOptionPane.showInputDialog("How many Lemurs would you like to add?"));
-        while (amount>0) {
+        String buttons[] = {"Tree Lemur", "Jungle Lemur", "Desert Lemur"};
+        int amount = Integer.parseInt(JOptionPane.showInputDialog("How many Lemurs would you like to add?"));
+        while (amount > 0) {
             //create as many lemurs as the user wants of the type it wants
-            type=JOptionPane.showOptionDialog(null, "What type of Lemur would you like to add?", "Type of Lemur", JOptionPane.PLAIN_MESSAGE, 3, null, buttons, buttons[0]);
-            if (type==0) {
+            type = JOptionPane.showOptionDialog(null, "What type of Lemur would you like to add?", "Type of Lemur", JOptionPane.PLAIN_MESSAGE, 3, null, buttons, buttons[0]);
+            if (type == 0) {
                 Lemurs.add(new TreeLemur());
-            } else if (type==1) {
+            } else if (type == 1) {
                 Lemurs.add(new JungleLemur());
             } else {
                 Lemurs.add(new DesertLemur());
@@ -35,7 +35,7 @@ public class LemurDatabase {
         }
         //print out the info of each lemur
         Lemurs.stream().forEach((Lemur) -> {
-            System.out.println("\n"+Lemur.toString());
+            System.out.println("\n" + Lemur.toString());
         });
 
     }

@@ -1,5 +1,7 @@
 package lemurdatabase;
+
 import javax.swing.*;
+
 /**
  * @title LemurDatabase
  * @author Steven Biro
@@ -8,57 +10,55 @@ import javax.swing.*;
  * @purpose The purpose of this program is to emulate 3 types of lemurs
  */
 public class Mammal {
-        //declear veribles
+    //declear veribles
 
-  private int itsAge;
-  private int itsWeight, itsGender;
-  private String breed,gender;
-  private String buttons[]={"Male", "Female"};
+    private int itsAge;
+    private int itsWeight, itsGender;
+    private String breed, gender;
+    private String buttons[] = {"Male", "Female"};
 
-  public Mammal() {
-      //randomsly generate age weight and gender
-    itsAge = (int)(Math.random()*15+1);
-    itsWeight = (int)(Math.random()*6+1);
-    itsGender = (int)(Math.random()*2+1);
-    
-  }
+    public Mammal() {
+        //randomsly generate age weight and gender
+        itsAge = (int) (Math.random() * 15 + 1);
+        itsWeight = (int) (Math.random() * 6 + 1);
+        itsGender = (int) (Math.random() * 2 + 1);
+
+    }
 //methods for getting and setting age weight and gender
-  public int getAge() {
-    return itsAge;
-  }
 
-  public int getWeight() {
-    return itsWeight;
-  }
-  
-  public int getGender() {
-      return itsGender;
-  }
+    public int getAge() {
+        return itsAge;
+    }
 
-  public void setAge(int newAge) {
-    itsAge = newAge;
-  }
+    public int getWeight() {
+        return itsWeight;
+    }
 
-  public void setWeight(int newWeight) {
-    itsWeight = newWeight;
-  }
-  
+    public int getGender() {
+        return itsGender;
+    }
 
-  public void setGender() {
-      itsGender=JOptionPane.showOptionDialog(null, "What gender would you like to set the lemur to?", "Gender", JOptionPane.PLAIN_MESSAGE, 3, null, buttons, buttons[0]);
-  }
+    public void setAge(int newAge) {
+        itsAge = newAge;
+    }
 
+    public void setWeight(int newWeight) {
+        itsWeight = newWeight;
+    }
 
-  public String toString() {
-      //add generic info about the mammal to the output
-      if (itsGender==0) {
-          gender="Male";
-      } else {
-          gender="Female";
-      }
-    String output="Age: "+itsAge+"\nWeight: "+itsWeight+" lbs\nGender: "+gender;
+    public void setGender() {
+        itsGender = JOptionPane.showOptionDialog(null, "What gender would you like to set the lemur to?", "Gender", JOptionPane.PLAIN_MESSAGE, 3, null, buttons, buttons[0]);
+    }
 
+    public String toString() {
+        //add generic info about the mammal to the output
+        if (itsGender == 0) {
+            gender = "Male";
+        } else {
+            gender = "Female";
+        }
+        String output = "Age: " + itsAge + "\nWeight: " + itsWeight + " lbs\nGender: " + gender;
 
-  return output;
-  }
+        return output;
+    }
 }

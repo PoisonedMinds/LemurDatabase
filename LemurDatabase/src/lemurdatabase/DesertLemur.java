@@ -1,4 +1,3 @@
-
 package lemurdatabase;
 
 /**
@@ -9,24 +8,26 @@ package lemurdatabase;
  * @purpose The purpose of this program is to emulate 3 types of lemurs
  */
 public class DesertLemur extends Lemur {
-        //declear varibles
+    //declear varibles
 
-    String water,coat,babies;
+    String water, coat, babies;
+
     public DesertLemur() {
-                //set info for lemur
+        //set info for lemur
 
-        water="Cacti";
-        coat="White";
-        babies="Two Thirds";
-        
+        water = "Cacti";
+        coat = "White";
+        babies = "Two Thirds";
+
     }
+
     public String toString() {
-                //add info about this type of lemur to the output
+        //add info about this type of lemur to the output
 
-         String output="Desert Lemur:\n";
-                output+=super.toString();
-                output+="\nWater Source: "+water+"\nColour: "+coat+"\nBaby Death Rate: "+babies;
-                return output;
+        String output = "Desert Lemur:\n";
+        output += super.toString();
+        output += "\nWater Source: " + water + "\nColour: " + coat + "\nBaby Death Rate: " + babies;
+        return output;
     }
-    
+
 }

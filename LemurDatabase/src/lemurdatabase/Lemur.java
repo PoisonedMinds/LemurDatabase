@@ -11,7 +11,7 @@ public class Lemur extends Mammal {
 
     //declear veribles
 
-    String location, coat, classified, dominant, groom;
+    private String location, coat, classified, dominant, groom;
 
     public Lemur() {
         //set info for all lemurs
